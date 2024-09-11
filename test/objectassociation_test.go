@@ -14,7 +14,7 @@ func TestListObjectAssociation(t *testing.T) {
 	client := bkcmdb.NewClient(
 		bkcmdb.WithBkUser("admin"),
 		bkcmdb.WithSupplier("0"),
-		bkcmdb.WithBaseUrl("http://10.50.219.26:8080"))
+		bkcmdb.WithBaseUrl("http://bkcmdb_host:8080"))
 
 	res, err := client.Object("postgresql").ObjectAssociation().List(context.Background())
 	assert.Nil(t, err)
@@ -27,7 +27,7 @@ func TestCreateObjectAssociation(t *testing.T) {
 	client := bkcmdb.NewClient(
 		bkcmdb.WithBkUser("admin"),
 		bkcmdb.WithSupplier("0"),
-		bkcmdb.WithBaseUrl("http://10.50.219.26:8080"))
+		bkcmdb.WithBaseUrl("http://bkcmdb_host:8080"))
 
 	body := types.Objectassociation{
 		BkObjAsstId:   "project_contain_clickhouse",

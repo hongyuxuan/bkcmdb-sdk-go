@@ -26,7 +26,7 @@ func (s *SuiteTestObject) SetupSuite() {
 		bkcmdb.WithBkUser("admin"),
 		bkcmdb.WithSupplier("0"),
 		// bkcmdb.WithDebug(true),
-		bkcmdb.WithBaseUrl("http://10.50.219.26:8080"))
+		bkcmdb.WithBaseUrl("http://bkcmdb_host:8080"))
 
 	s.bkObjId = "testobject"
 	s.classificationId = "database"
